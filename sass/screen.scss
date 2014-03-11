@@ -1,0 +1,33 @@
+@import "library";
+
+// Global templates
+
+%group:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+%container {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+// Global tags
+
+body {
+}
+
+a {
+    color: #800000;
+}
+
+// Everything else
+
+.wrap {
+    @extend %container;
+}
+
+form {
+    margin-bottom: 1em;
+}

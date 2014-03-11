@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" media="all">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/global.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+    <h1><a href="/">Form</a></h1>
+    <form>
+        <fieldset class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" class="form-control">
+            <div class="instructions">Each word must start with a capital letter.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" class="form-control">
+            <div class="instructions">Second-level domain must be gmail, outlook, or aol. TLD must be 2 or more chars</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" class="form-control">
+            <div class="instructions">May only be alphanumeric and dashes. No underscores</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="website">Website</label>
+            <input id="website" type="text" name="website" class="form-control">
+            <div class="instructions">Must start with http, https, or no protocol at all. No query strings or hashes.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="cc">Credit Card</label>
+            <input id="cc" type="text" name="cc" class="form-control" placeholer="0000 0000 0000 0000">
+            <div class="instructions">Must be four four-digit numbers, separated by spaces</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="phone">Phone number</label>
+            <input id="phone" type="text" name="phone" class="form-control" placeholer="000-000-0000">
+            <div class="instructions">Must be 10 digits, with dashes, and a Chicagoland landline</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="birth-month">Birth month</label>
+            <input id="birth-month" type="text" name="birth-month" class="form-control" placeholer="e.g. March">
+            <div class="instructions">Must be born in a month that has an 'R'.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="birth-year">Birth year</label>
+            <input id="birth-year" type="text" name="birth-year" class="form-control" placeholer="e.g. 1980">
+            <div class="instructions">Must be older than 12.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="zip-code">US ZIP code</label>
+            <input id="zip-code" type="text" name="zip-code" class="form-control" placeholer="e.g. 1980">
+            <div class="instructions">May be short form or long form.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="movie">Favorite movie</label>
+            <input id="movie" type="text" name="movie" class="form-control" placeholer="e.g. 1980">
+            <div class="instructions">Must be a one-word movie.</div>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="type">Meyers-Briggs type</label>
+            <input id="type" type="text" name="type" class="form-control" placeholer="e.g. INTB">
+            <div class="instructions"></div>
+        </fieldset>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

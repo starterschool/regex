@@ -1,0 +1,15 @@
+@mixin bg-size($size: 100% auto) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    background-size: $size;
+}
+
+@mixin arrow-up($color:black, $thickness:6px) {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent $color transparent;
+    border-style: solid;
+    border-width: $thickness;
+}

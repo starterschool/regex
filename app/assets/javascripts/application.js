@@ -16,9 +16,8 @@
 $(function() {
     var textInputs = $('input').not('[type=radio]');
 
-
     textInputs.focusout(function(e) {
-        var userInput = $(this).val();
+        var value = $(this).val();
         // var userMatch = new RegExp(_________);
         // var match = ___________;
         if (match) {

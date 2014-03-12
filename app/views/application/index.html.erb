@@ -33,7 +33,7 @@
         </fieldset>
         <fieldset class="form-group">
             <label for="website">Website</label>
-            <input id="website" type="text" name="website" class="form-control" data-regex="[A-Z][a-z]+ [A-Z][a-z]+">
+            <input id="website" type="text" name="website" class="form-control" data-regex="["http"|"https"+":\/\/"]|[a-zA-Z]+[".com"|".org"]">
             <div class="instructions">Must start with http, https, or no protocol at all. No query strings or hashes.</div>
         </fieldset>
         <fieldset class="form-group">

@@ -21,7 +21,7 @@ $(function() {
         // var userMatch = new RegExp(_________);
         // var match = ___________;
 
-        var userZipcode = new RegExp(/^\d{5}(?:[-\s]\d{4})?$/);
+        var userZipcode = new RegExp("^\d{5}(?:[-\s]\d{4})?$");
         var match = userZipcode.test(value);
 
         if (match) {

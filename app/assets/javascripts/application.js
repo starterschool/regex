@@ -18,9 +18,11 @@ $(function() {
 
     textInputs.focusout(function(e) {
         var value = $(this).val();
-        // var userMatch = new RegExp(_________);
-        // var match = ___________;
-        if (match) {
+        var fieldID = $(this).attr('id');
+        var reString = $(this).data('regex');
+        var re = new RegExp(reString);
+        var doesItMatch = re.test(value);
+        if (doesItMatch) {
             $(this).closest('.form-group').removeClass('has-error');
         } else {
             $(this).closest('.form-group').addClass('has-error');

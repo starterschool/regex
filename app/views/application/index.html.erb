@@ -18,7 +18,7 @@
         </fieldset>
         <fieldset class="form-group">
             <label for="zip-code">US ZIP code</label>
-            <input id="zip-code" type="text" name="zip-code" class="form-control" placeholder="e.g. 1980" value="<%= @zip %>">
+            <input id="zip-code" type="text" name="zip-code" class="form-control" placeholder="e.g. 1980" value="<%= @zip %>" data-regex="^\d{5}(?:[-\s]\d{4})?$">
             <div class="instructions">Short form or long form.</div>
         </fieldset>
         <fieldset class="form-group">

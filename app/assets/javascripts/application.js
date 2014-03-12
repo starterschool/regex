@@ -18,13 +18,12 @@ $(function() {
 
     textInputs.focusout(function(e) {
         var value = $(this).val();
-        // var userMatch = new RegExp(_________);
-        // var match = ___________;
+        var fieldID = $(this).attr('id');
+        var reString = $(this).data('regex');
+        var re = new RegExp(reString);
+        var doesItMatch = re.test(value);
 
-        var userZipcode = new RegExp("^\d{5}(?:[-\s]\d{4})?$");
-        var match = userZipcode.test(value);
-
-        if (match) {
+        if (doesItMatch) {
             $(this).closest('.form-group').removeClass('has-error');
         } else {
             $(this).closest('.form-group').addClass('has-error');

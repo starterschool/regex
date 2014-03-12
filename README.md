@@ -12,7 +12,7 @@ Regular expressions
 ### Reference & guides
 
 - http://www.labnol.org/internet/regular-expressions-forms/28380/
-- http://coding.smashingmagazine.com/2009/06/01/essential-guide-to-regular-- expressions-tools-tutorials-and-resources/
+- http://coding.smashingmagazine.com/2009/06/01/essential-guide-to-regular--expressions-tools-tutorials-and-resources/
 
 ### Tools
 - http://www.regexr.com/

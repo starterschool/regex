@@ -26,8 +26,18 @@ a {
 
 .wrap {
     @extend %container;
+    padding-top: 20px;
 }
 
 form {
     margin-bottom: 1em;
+}
+
+input {
+    margin-bottom: 4px;
+}
+
+.instructions {
+    font-size: 12px;
+    color: #aaa;
 }

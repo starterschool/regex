@@ -20,6 +20,10 @@ $(function() {
         var value = $(this).val();
         // var userMatch = new RegExp(_________);
         // var match = ___________;
+
+        var userZipcode = new RegExp(/^\d{5}(?:[-\s]\d{4})?$/);
+        var match = userZipcode.test(value);
+
         if (match) {
             $(this).closest('.form-group').removeClass('has-error');
         } else {

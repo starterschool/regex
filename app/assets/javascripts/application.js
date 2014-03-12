@@ -16,13 +16,31 @@
 $(function() {
     var textInputs = $('input').not('[type=radio]');
 
+    var find_regex = {
+        "name": "Chance",
+        "email": "chance@gmail.com",
+        "zip-code": "11111",
+        "color": "red",
+        "username": "mohammed",
+        "website": "google.com",
+        "cc": "123456789",
+        "phone": "10",
+        "birth-month": new RegExp([r]),
+        "birth-year": "88",
+        "movie": "Apollo 13",
+        "type": "BAMF"
+    }
+
     textInputs.focusout(function(e) {
         var value = $(this).val();
-        // var userMatch = new RegExp(_________);
-        // var match = ___________;
+        var input_id = $(this).attr('id');
+
+        var match = find_regex[input_id] == value;
+
         if (match) {
             $(this).closest('.form-group').removeClass('has-error');
-        } else {
+        }
+        else {
             $(this).closest('.form-group').addClass('has-error');
         }
     }).keypress(function (e) {

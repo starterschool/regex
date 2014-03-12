@@ -16,26 +16,29 @@
 $(function() {
     var textInputs = $('input').not('[type=radio]');
 
-    var find_regex = {
-        "name": "Chance",
-        "email": "chance@gmail.com",
-        "zip-code": "11111",
-        "color": "red",
-        "username": "mohammed",
-        "website": "google.com",
-        "cc": "123456789",
-        "phone": "10",
-        "birth-month": new RegExp([r]),
-        "birth-year": "88",
-        "movie": "Apollo 13",
-        "type": "BAMF"
-    }
+    // var find_regex = {
+    //     "name": /[A-Z][a-z]+ [A-Z][a-z]/,
+    //     "email": "chance@gmail.com",
+    //     "zip-code": "11111",
+    //     "color": "red",
+    //     "username": "moo",
+    //     "website": "google.com",
+    //     "cc": "123456789",
+    //     "phone": "10",
+    //     "birth-month": /[r|R]/,
+    //     "birth-year": "88",
+    //     "movie": "Apollo 13",
+    //     "type": "BAMF"
+    // }
 
     textInputs.focusout(function(e) {
         var value = $(this).val();
         var input_id = $(this).attr('id');
 
-        var match = find_regex[input_id] == value;
+        var reString = $(this).data('regex');
+        var re = new RegExp(reString);
+
+        var match = re.test(value);
 
         if (match) {
             $(this).closest('.form-group').removeClass('has-error');

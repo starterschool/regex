@@ -1,7 +1,7 @@
 Regex::Application.routes.draw do
   get "/", to: "application#index"
-  get "/:zip", to: "application#zip", id: /\d{5}$/
-  get "/:color", to: "application#color", id: /[0-9a-f]{6}$/
+  get "/:zip", to: "application#zip", zip: /\d{5}/
+  get "/:color", to: "application#color", color: /[0-9a-f]{6}/
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

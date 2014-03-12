@@ -16,6 +16,20 @@
 $(function() {
     var textInputs = $('input').not('[type=radio]');
 
+
+    textInputs.focusout(function(e) {
+        var userInput = $(this).val();
+        // var userMatch = new RegExp(_________);
+        // var match = ___________;
+        if (match) {
+            $(this).closest('.form-group').addClass('has-error');
+        } else {
+            $(this).closest('.form-group').removeClass('has-error');
+        }
+    }).keypress(function (e) {
+        $(this).closest('.form-group').removeClass('has-error');
+    });
+
     $('form').submit(function(e) {
         var formValid = true;
         e.preventDefault();
@@ -38,24 +52,11 @@ $(function() {
                     // The response from the serve looks like JSON, but is a string. We need to use this function to turn it from a string into JSON.
                     responseAsJSON = $.parseJSON(response);
                     if (responseAsJSON['status'] == 1) {
-                        $('h1').after('<div class="alert alert-success">Success!</div>');
+                        $('wrap').prepend('<div class="alert alert-success">Success!</div>');
                         $('form')[0].reset();
                     }
                 }
             );
         }
-    });
-
-    textInputs.focusout(function(e) {
-        var userInput = $(this).val();
-        // var userMatch = new RegExp(_________);
-        // var match = ___________;
-        if (match) {
-            $(this).closest('.form-group').addClass('has-error');
-        } else {
-            $(this).closest('.form-group').removeClass('has-error');
-        }
-    }).keypress(function (e) {
-        $(this).closest('.form-group').removeClass('has-error');
     });
 });

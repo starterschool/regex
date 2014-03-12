@@ -30,7 +30,7 @@ abc…     Letters
 \S       any Non-whitespace character
 ```
 
-[Our JSBin playground](http://jsbin.com/rodanupo/4/edit)
+[Our JSBin playground](http://jsbin.com/rodanupo/8/edit)
 
 ### Tutorials
 
